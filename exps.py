@@ -2,7 +2,7 @@ from utils import *
 
 dg = DataGeneration()
 
-N = 100; K = 3;
+N = 10; K = 3;
 inf = 10000000
 etheo = np.sqrt(np.log(K)/N)
 # print(etheo)
@@ -33,7 +33,7 @@ afp = dg.AFP(N,K)
 # run(afp)
 
 
-bp = dg.BP(10, 3)
+bp = dg.BP(N, K)
 # run(bp)
 
 pl = dg.DIW("all")
