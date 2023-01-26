@@ -9,7 +9,7 @@ def ew_ftl(data):
     N, J = data.shape
     h = data.max()
     ftlpayoff = np.random.choice(data[0])       # randomly choose first 1
-    cumpayoffs = data[0]
+    cumpayoffs = data[0].copy()
     for i in range(1, N):
         choice = np.argmax(cumpayoffs)          # make choice
         ftlpayoff += data[i][choice]
