@@ -4,7 +4,7 @@ from algo import *
 dg = DataGeneration()
 
 N = 50; K = 3;
-inf = 10
+inf = float('inf')
 etheo = np.sqrt(np.log(K)/N)
 # print(etheo)
 
@@ -35,8 +35,8 @@ afp = dg.AFP(N,K)
 
 
 bp = dg.BP(N, K)
-run(bp)
+# run(bp)
 
 pl = dg.DIW("all")
 # print(pl)
-# run(pl)
+run(pl)

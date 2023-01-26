@@ -8,7 +8,14 @@ def bestinhindsight(data):
 def ew_ftl(data):
     N, J = data.shape
     h = data.max()
-    payoffs = np.array(range(J))
+    ftlpayoff = np.random.choice(data[0])       # randomly choose first 1
+    cumpayoffs = data[0]
+    for i in range(1, N):
+        choice = np.argmax(cumpayoffs)          # make choice
+        ftlpayoff += data[i][choice]
+        cumpayoffs += data[i]                   # learn for next round
+
+    return ftlpayoff
     
 
 def ew(data: np.ndarray, eps: float = 0.0):
