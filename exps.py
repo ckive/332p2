@@ -1,9 +1,10 @@
 from utils import *
+from algo import *
 
 dg = DataGeneration()
 
-N = 10; K = 3;
-inf = 10000000
+N = 50; K = 3;
+inf = 10
 etheo = np.sqrt(np.log(K)/N)
 # print(etheo)
 
@@ -34,8 +35,8 @@ afp = dg.AFP(N,K)
 
 
 bp = dg.BP(N, K)
-# run(bp)
+run(bp)
 
 pl = dg.DIW("all")
 # print(pl)
-run(pl)
+# run(pl)
